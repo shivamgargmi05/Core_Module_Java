@@ -1,0 +1,62 @@
+Q1. What is Collection in Java ?
+Answer - The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects. Java Collection means a single unit of objects. Java Collection framework provides many interfaces(Set, List, Queue, Deque) and classes(ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+
+Q2. Differentiate between Collection and Collections in the context of Java.
+Answer - 
+1. Collection is the interface where you group objects into a single unit while Collections is a utility class that has some set of operations you perform on Collection. 
+2. Collection does not have all static methods in it, but Collections consist of methods that are all static. 
+
+
+Q3. What are the advantages of the Collection framework ?
+Answer - 
+1. Increases program speed and quality.
+2. Provides high-performance.
+3. High-quality implementations of useful data structures and algorithms.
+
+
+Q4. Explain the various interfaces used in the Collection framework.
+Answer - 
+The core interfaces within the Java Collection framework are as follows -
+
+1. List: The List interface extends the Collection interface and represents an ordered collection of elements. Lists allow duplicate elements and maintain the insertion order. Common implementations of List include ArrayList, LinkedList, and Vector.
+
+2. Set: The Set interface, also an extension of the Collection interface, represents a collection that does not allow duplicate elements. Sets typically do not maintain a specific order of elements. Notable implementations of Set are HashSet, TreeSet, and LinkedHashSet.
+
+3. Queue: The Queue interface defines a collection that represents a waiting area, where elements are inserted at one end and removed from the other. Queues follow the First-In-First-Out(FIFO) principle. Notable implementations of Queue include LinkedList and PriorityQueue.
+
+4. Deque: The Deque interface extends the Queue interface and represents a double-ended queue, allowing elements to be inserted and removed from both ends. Deques support operations at both ends. Common implementations of Deque include ArrayDeque and LinkedList.
+
+5. Map: The Map interface represents a mapping between unique keys and corresponding values. It does not extend the Collection interface but is an important part of the Java Collection framework. Maps do not allow duplicate keys and are commonly used for key-value pair associations. Notable implementations of Map include HashMap, TreeMap, and LinkedHashMap.
+
+
+Q5. Differentiate between List and Set in Java. 
+Answer -
+List: The List interface extends the Collection interface and represents an ordered collection of elements. Lists allow duplicate elements and maintain the insertion order. Common implementations of List include ArrayList, LinkedList, and Vector.
+
+Set: The Set interface, also an extension of the Collection interface, represents a collection that does not allow duplicate elements. Sets typically do not maintain a specific order of elements. Notable implementations of Set are HashSet, TreeSet, and LinkedHashSet.
+
+
+Q6. What is the Differentiate between Iterator and ListIterator in Java. 
+Answer -
+1. Iterator is applicable for all collection implemented interfaces and classes like Set, List, Queue, Deque, Map while ListIterator is only applicable for List collection implemented classes like ArrayList, LinkedList, etc.
+2. Iterator can traverse only in forward direction whereas ListIterator traverses both in forward and backward directions.
+
+
+Q7. What is the Differentiate betweeen Comparable and Comparator ?
+Answer - 
+1. Comparable provides compareTo() method to sort elements while Comparator provides compare() method to sort elements.
+2. Comparable is present in java.lang package but a Comparator is present in the java.util package.
+3. Sort the list elements of Comparable type by Collections.sort(List) method but sort the list elements of Comparator type by Collections.sort(List, Comparator) method.
+
+
+Q9. Distinguish between a HashMap and a TreeMap.
+Answer -
+1. HashMap allows a single null key and multiple null values. TreeMap does not allow null keys but can have multiple null values. 
+2. HashMap allows heterogeneous elements because it does not perform sorting on keys. TreeMap allows homogeneous values as a key because of sorting.
+
+
+Q10. Define LinkedHashMap in Java. 
+Answer - The LinkedHashMap Class is just like HashMap with an additional feature of maintaining an order of elements inserted into it. 
+Syntax - public class LinkedHashMap<K, V> extends HashMap<K, V> implements Map<K, V>
+
