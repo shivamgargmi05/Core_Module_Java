@@ -1,0 +1,86 @@
+Q1. What is Exception in Java ?
+Answer - An exception is an unwanted event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions. When an error occurs within a method, the method creates an object and hands it off to the runtime system.
+
+
+Q2. What is Exception Handling ?
+Answer - Exception handling is the process of responding to unwanted or unexpected events when a computer program runs. Exception handling deals with these events to avoid the program or system crashing, and without this process, exceptions would disrupt the normal operation of a program.
+Exception Handling is required to execute the entire program normally without an abruption using try-catch-finally block.
+
+
+Q3. What is the difference between Checked and Unchecked Exceptions and Error ?
+Answer - Checked exceptions happen at compile time detects by compiler when the source code is transformed into an executable code like IOException. Unchecked exceptions happen at runtime not detected by compiler when the executable program starts running like ArithmeticException.
+
+Error occur only when system resources are deficient whereas like StackOverflowError, an exception is caused if a code has some problem. An error can never be recovered whereas, an exception can be recovered by preparing the code to handle the exception.
+
+
+Q4. What are the difference between throw and throws in Java ?
+Answer - The throw keyword is used to throw an exception explicitly. It can throw only one exception at a time.
+
+The throws keyword can be used to declare multiple exceptions, separated by a comma. Whichever exception occurs, if matched with the declared ones, is thrown automatically then.
+
+
+Q5. What is multithreading in Java? Mention its advantages.
+Answer - In Java, Multithreading refers to a process of executing two or more threads simultaneously for maximum utilization of the CPU. A thread in Java is a lightweight process requiring fewer resources to create and share the process resources.
+
+Advantages of Multithreading are -
+1. Simultaneous and fully symmetric use of multiple processors for computation.
+2. Superior application responsiveness.
+3. Improved server responsiveness.
+4. Minimized system resource usage.
+5. Program structure simplification.
+6. Better communication.
+
+
+Q7. How can you handle exceptions in Java ?
+Answer - The try keyword is used to specify a block where we should place an exception code. It means we can't use try block alone. The try block must be followed by either catch or finally. The catch block is used to handle the exception. Syntax -
+
+try {
+	// exception code
+} catch(Exception e) {
+	// handle exception code
+} finally {
+	// rest of the code
+}
+
+
+Q8. What is Thread in Java ?
+Answer - A thread is a lightweight/subset of a process. The Java Virtual Machine allows an application to have multiple threads of execution running concurrently. Every thread has a priority. Threads with higher priority are executed in preference to threads with lower priority.
+Each thread is assigned to the Thread Scheduler that maintains the lifecycle of the thread.
+
+
+Q9. What are the two ways of implementing thread in java ?
+Answer - There are two ways to create/implementing a thread in java -
+
+1. By extending Thread class -
+
+class Multi extends Thread {
+	public void run(){
+		System.out.println("thread is running...");
+	}
+
+	public static void main(String args[]) {
+		Multi t1=new Multi();
+		t1.start();
+	}
+}
+
+2. By implementing Runnable interface -
+
+class Multi3 implements Runnable {
+	public void run() {
+		System.out.println("thread is running...");
+	}
+
+	public static void main(String args[]) {
+		Multi3 m1=new Multi3();
+		
+		Thread t1 =new Thread(m1); // Using the constructor Thread(Runnable r)
+		t1.start();
+	}
+}
+
+
+Q10. What do you mean by garbage collection ?
+Answer - Garbage collection in Java is the automated process of deleting code/object that's no longer needed or used. This automatically frees up memory space by calling the void finalize() automatically.
+
+

@@ -1,0 +1,62 @@
+Q1. What is the Spring MVC framework ?
+Answer - Spring MVC is a Java framework that is used to develop web applications. It is built on a Model-View-Controller(MVC) pattern and possesses all the basic features of a spring framework, such as Dependency Injection, Inversion of Control.
+It is a design pattern that separates the business logic, presentation logic and data.
+
+Controller acts as an interface between View and Model. Controller intercepts all the incoming requests.
+Model represents the state of the application i.e., data. It can also have business logic.
+View represents the presentaion logic i.e., UI(User Interface).
+
+
+Q2. What are the benefits of Spring MVC framework over other MVC frameworks ?
+Answer - Benefits of Spring MVC framework over other MVC frameworks are -
+
+1. It enables rapid and parallel development.
+2. Development of the application becomes fast.
+3. Easy for multiple developers to work together.
+4. Easier to Update the application.
+5. Provides Spring Form Tag Library for view/UI.
+
+
+Q3. What is DispatcherServlet in Spring MVC ? In other words, can you explain the Spring MVC architecture ?
+Answer - The DispatcherServlet is the front controller in Spring web applications. It's used to create web applications and REST services in Spring MVC.
+DispatcherServlet handles an incoming HttpRequest, delegates the request, and processes that request according to the configured HandlerAdapter interfaces that have been implemented within the Spring application along with accompanying annotations specifying handlers, controller endpoints, and response objects.
+
+
+Q4. What is a View Resolver pattern and explain it's significance in Spring MVC ?
+Answer - All MVC frameworks provide a way of working with views. Spring does that via the view resolvers, which enable you to render models in the browser without giving the implementation to a specific view technology. The ViewResolver maps view names to actual views.
+
+Significance of ViewResolver in Spring MVC is it allows us to set properties such as prefix or suffix to the view name to generate the final view page URL.
+
+
+Q5. What are the differences between @RequestParam and @PathVariable annotations ?
+Answer - @RequestParam is used to capture query parameters or form parameters from the URL, while @PathVariable is used to capture values from the URL path. They also have different syntax, usage, and behavior in handling URL parameters in Spring MVC applications.
+
+
+Q6. What is the model in Spring MVC ?
+Answer - In Spring MVC, the model works a container that contains the data of the application. Here, a data can be in any form such as objects, strings, information from the database, etc. It is required to place the Model interface in the controller part of the application.
+
+
+Q7. What is the role of @ModelAttribute annotation ?
+Answer - @ModelAttribute is an annotation that binds a method parameter or method return value to a named model attribute, and then exposes it to a web view.
+
+
+Q8. What is the significance of @Repository annotation ?
+Answer - @Repository Annotation is a specialization of @Component annotation which is used to indicate that the class provides the mechanism for storage, retrieval, update and delete(CRUD) operation on objects.
+
+
+Q9. What does REST stand for ? and what is RESTful web services ?
+Answer - REST stands for Representational State Transfer is a software architecture that imposes conditions on how an API should work.
+
+RESTful Web Services are basically REST Architecture based Web Services. In REST Architecture, everything(class/method) is a resource. RESTful web services are light weight, highly scalable and maintainable and are very commonly used to create APIs for web-based applications.
+
+
+Q10. What is the difference between RESTful web services and SOAP web services ?
+Answer - Differences between RESTful web services and SOAP web services are as follows -
+
+1. SOAP is a protocol while REST is an architecture pattern.
+2. SOAP stands for Simple Object Access Protocol and REST stands for Representational State Transfer.
+3. For data exchange, SOAP uses XML always but REST uses JSON/XML.
+4. SOAP uses JAX-WS api while REST uses JAX-RS api.
+5. REST is easy to implement than SOAP to implement.
+
+

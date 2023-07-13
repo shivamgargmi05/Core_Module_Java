@@ -1,0 +1,70 @@
+Q1. What is Spring Framework ?
+Answer - Spring Framework is a Java platform that provides infrastructure support for developing Java end to end applications. Spring handles the infrastructure so you can focus on your application business logic. Spring was introduced by the Pivotal team, but currently managing by
+the vmware team.
+
+
+Q2. What are the features of Spring Framework ?
+Answer - Features of Spring Framework are -
+
+1. Spring is based on the principle of Inversion of Control(IoC) that creates, manages and configure the lifecycle of bean.
+2. Spring is a non-invasive framework.
+3. Spring promotes dependency injection using constructor and setter injection.
+4. Spring MVC, Security, Data, Aspect-Oriented Programming(AOP) and Transaction Management.
+5. Spring promotes internationalization(i18N) and Localization.
+
+
+Q3. What is a Spring Configuration File ?
+Answer - Spring configuration file is a file with . xml extension and the file contains information about the classes and interfaces and their dependencies. Using this file the spring container controls the life cycle of a spring bean and also Dependency Injection is achieved.
+
+
+Q4. What do you mean by IoC container ?
+Answer - IoC container is a framework for implementing automated dependency injection. It contains object creation for the longer ways to use and injects dependencies within the class.
+It also manages, creates, and configure the lifecycle of the spring bean.
+
+
+Q5. What do you understand by Dependency Injection ?
+Answer - Dependency Injection means to inject the dependent class object to target class object automatically. Dependency injection aims to separate the concerns of constructing objects and using them, leading to loosely coupled programs. Dependency Injection uses constructor injection
+and setter injection.
+
+
+Q6. Explain the difference between constructor and setter injection ?
+Answer -
+Constructor Injection -
+1. Injecting dependent class object to target class object using constructor.
+2. Doesn't override setter injection.
+3. Suggested to use in layered approach.
+
+Setter Injection -
+1. Injecting dependent class object to target class object using setter methods.
+2. Overrides constructor injection.
+3. Suggested to use when a class have n number of properties.
+
+
+Q7. What are Spring Beans ?
+Answer - A Spring bean is an object that form the backbone of your application and that is managed by the Spring IoC container. A bean is an object that is instantiated, assembled, and otherwise managed by a Spring IoC container.
+
+
+Q8. What are the bean scopes available in Spring Bean ?
+Answer - There are four types of spring bean scopes -
+
+1. singleton - only one instance of the spring bean will be created for the spring container. This is the default spring bean scope.
+2. prototype – A new instance will be created every time the bean is requested from the spring container.
+3. request – This is same as prototype scope, however it’s meant to be used for web applications. A new instance of the bean will be created for each HTTP request.
+4. session – A new bean will be created for each HTTP session by the container.
+
+
+Q9. What is Autowiring and name the different modes of it ?
+Answer - Injecting the dependent class object to the target class object automatically is known as Autowiring. It internally uses setter or constructor injection. Autowiring can't be used to inject primitive and string values. It works with reference only.
+
+Different modes of autowiring are -
+1. byName - The byName mode injects the object dependency according to name of the dependent bean. In such case, dependent property name in target class and dependent bean name must be same, so it enhances tight coupling. It internally calls setter method
+2. byType - The byType mode injects the object dependency according to type of the bean. So property name and bean name can be different, so it promotes loose coupling. It internally calls setter method.
+3. no - It is the default autowiring mode. It means no autowiring bydefault.
+4. constructor - The constructor mode injects the dependency by calling the constructor of the class. It calls the constructor having large number of parameters.
+
+
+Q10. Explain Bean life cycle in Spring Bean Factory Container.
+Answer - Spring Bean lifecycle phases are shown as below - 
+	Container Started -> Bean Instantiated -> Dependencies Injected -> Custom init() -> Custom utility() -> Custom destroy()
+
+

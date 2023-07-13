@@ -1,0 +1,58 @@
+Q1. What is ORM in Hibernate ?
+Answer - ORM stands for Object-Relational Mapping(ORM) is a programming technique for converting data between relational databases and object oriented programming languages such as Java, C#, etc.
+
+
+Q2. What are the advantages of Hibernate over JDBC ?
+Answer - An ORM system has the following advantages over plain JDBC −
+
+1. Let’s business code access objects rather than DB tables.
+2. Hides details of SQL queries from object-oriented logic.
+3. Based on JDBC 'under the hood.'
+4. No need to deal with the database implementation.
+5. Entities based on business concepts rather than database structure.
+6. Transaction management and automatic key generation.
+7. Fast development of application.
+
+
+Q3. What are the some important features of Hibernate framework ?
+Answer - Important features of Hibernate framework are -
+
+1. Hibernate framework supports auto DDL operations internally like creation of table, drop a table, alter a table etc.
+2. Hibernate supports Auto Primary key generation.
+3. Hibernate framework is independent of Database because it supports HQL(Hibernate Query Language) which is not specific to any database.
+4. In Hibernate, Exception Handling is not mandatory.
+5. Hibernate supports Cache Memory i.e., L1 level and L2 level cache.
+6. Hibernate is a ORM tool means it support Object relational mapping. In hibernate each record is represented as a Object.
+
+
+Q4. What is a Session in a hibernate ?
+Answer - A Session is used to get a physical connection with a database. The Session object is lightweight and designed to be instantiated each time an interaction is needed with the database. Persistent objects are saved and retrieved through a Session object.
+
+
+Q5. What is a SessionFactory ?
+Answer - SessionFactory is an Interface which is present in org.hibernate package and it is used to create Session Object. It is immutable and thread-safe in nature. The SessionFactory object is heavyweight.
+
+
+Q6. What is HQL ?
+Answer - Hibernate Query Language(HQL) is an object-oriented query language, similar to SQL, but instead of operating on tables and columns, HQL works with persistent objects and their properties. HQL queries are translated by Hibernate into conventional SQL queries, which in turns perform action on database.
+
+
+Q8. What is hibernate caching ?
+Answer - Hibernate caching improves the performance of the application by pooling the object in the cache. It is useful when we have to fetch the same data multiple times. There are mainly two types of caching: First Level Cache(L1) and Second Level Cache(L2).
+
+
+Q9. What is the difference between first level and second level cache ?
+Answer - Differences between level L1 and L2 cache are - 
+
+1. First level cache(L1) is a session level cache and it is always associated with session level object while Second level cache(L2) is session factory level cache and it is associated with SessionFactory object.
+2. L1 cache is enabled by default but L2 cache is not enabled by default
+3. L1 cache is available for a session while L2 cache is available across all session.
+4. No Extra configuration required for L1 cache but for L2 cache We have to decide which concurrency strategy to use and also need to configure cache expiration and physical cache attributes.
+
+
+Q10. What can you tell about Hibernate Configuration File ?
+Answer - Hibernate facilitates to provide the configurations either in an XML file(like hibernate.cfg.xml) or properties file(like hibernate.properties).
+hibernate.cfg.xml file contains database related configurations and session related configurations. Database configuration includes jdbc connection url, DB user credentials, DB user password, driver class and hibernate dialect.
+Configuration cfg=new Configuration().configure("hibernate.cfg.xml");
+
+

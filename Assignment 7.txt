@@ -1,0 +1,82 @@
+Q1. What is the use of JDBC in java ?
+Answer - JDBC stands for Java Database Connectivity. JDBC is a Java API to connect and execute the query with the database. JDBC API uses JDBC drivers to connect with the database. JDBC API is used to access tabular data stored in any relational database. By the help of JDBC API, we can save, update, delete and fetch data from the database.
+
+
+Q2. What are the steps involved in JDBC ?
+Answer - Following are the steps involved in JDBC are -
+
+1. Load the JDBC Driver using Class.forName("com.mysql.cj.jdbc.Driver").
+2. Establish the connection between a java program and the database i.e.,
+	Connection con=null;
+con=DriverManager.getConnection("jdbc:mysql://localhost:3306/dbName", "username", "password");
+3. Create the Statement/PreparedStatement object for sending the query from java program to db 
+	Statement st=con.createStatement("query");
+	PreparedStatement pst=con.prepareStatement();
+	set query positional parameter(?) using pst.setInt(1, 100);
+4. Get the data from the db to java program by executing the query 
+	ResultSet rs=st.executeQuery();	// for select query
+	int rows=st.executeUpdate();	// for non-select query
+5. Process/Access the ResultSet
+6. Handle the SQLException using try-catch block
+7. Close the resources i.e., Connection, Statement/PreparedStatement, ResultSet object.
+
+
+Q3. What are the types of statement in JDBC in java ?
+Answer - There are different types of statements that are used in JDBC as follows:
+
+1. Statement: From the connection interface, you can create the object for this interface. It is generally used for general–purpose access to databases and is useful while using static SQL statements at runtime.
+
+2. PreparedStatement - It represents a recompiled SQL statement, that can be executed many times. This accepts parameterized SQL queries. In this, “?” is used instead of the parameter, one can pass the parameter dynamically by using the methods of PREPARED STATEMENT at run time.
+
+3. CallableStatement - The Callable Statement interface provided by JDBC API helps in executing stored procedures. Stored procedures which are a group of statements that we compile in the database for some task, they are beneficial when we are dealing with multiple tables with complex scenario & rather than sending multiple queries to the database, we can send the required data to the stored procedure & lower the logic executed in the database server itself. 
+
+
+Q4. What is Servlet in Java ?
+Answer - Servlet is a server side java program used to create a web application. There are many interfaces and classes in the Servlet API such as Servlet, GenericServlet, HttpServlet, ServletRequest, ServletResponse, etc.
+
+
+Q5. Explain the lifecycle of a Servlet.
+Answer - The web container maintains the life cycle of a servlet instance. Let's see the life cycle of the servlet:
+
+1. Servlet class is loaded
+2. Servlet instance is created
+3. init method is invoked - will be called once for each request on deployment
+	public void init(ServletConfig config) throws ServletException 
+4. service method is invoked - will be called on each client request
+public void service(ServletRequest rq, ServletResponse rp) throws ServletException, IOException  
+5. destroy method is invoked - will be called once on undeployment
+	public void destroy()  
+	
+	
+Q7. What is the purpose of the doGet() and doPost() methods in a servlet ?
+Answer - The doGet() is called by the server(via the service method) when the client requests a GET request. It is used to retrieve information from the server. 
+The doPost() is called by the server(via the service method) when the client requests a POST request. It is used to send information to the server.
+
+
+Q8. Explain the JSP Model-View-Controller(MVC) architecture.
+Answer - MVC stands for Model View and Controller. It is a design pattern that separates the business logic, presentation logic and data.
+
+Controller acts as an interface between View and Model. Controller intercepts all the incoming requests.
+Model represents the state of the application i.e., data. It can also have business logic.
+View represents the presentaion logic i.e., UI(User Interface).
+
+
+Q9. What are some advantages of Servlets ?
+Answer - The advantages of Servlet are as follows:
+
+1. Better performance: because it creates a thread for each request, not process.
+2. Portability: because it uses Java language.
+3. Robust: JVM manages Servlets, so we don't need to worry about the memory leak, garbage collection, etc.
+4. Secure: because it uses java language.
+5. Inexpensive and Safe to use.
+
+
+Q10. What are the limitations of JSP ?
+Answer - The limitations of JSP are as follows -
+
+1. It is very difficult to perform database connectivity in JSP.
+2. As the JSP is compiled on the server, it is not memory and time-efficient.
+3. It is hard to track errors in JSP files because they are an extension to Servlets. 
+4. As JSP is an HTML file, it doesn't provide many features.
+
+
